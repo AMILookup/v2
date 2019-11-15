@@ -1,0 +1,7 @@
+{
+    "AppSyncApiName": "amilookupv2",
+    "DynamoDBBillingMode": "PROVISIONED",
+    "DynamoDBModelTableReadIOPS": 5,
+    "DynamoDBModelTableWriteIOPS": 5,
+    "DynamoDBEnableServerSideEncryption": "false"
+}
