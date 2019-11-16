@@ -1,17 +1,19 @@
 <template>
-  <div class="amilookup">
-    <h1>This is a test</h1>
-    <p>Some Data Here</p>
+  <div class="search">
+    <h1>Search</h1>
+    <p>Add Search Bar Here</p>
+    <input type="text" v-model="searchtext" placeholder="edit me">
+    <p>Message is: {{ searchtext }}</p>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'amilookup',
-  props: {
-    msg: String
+  export default {
+    name: 'TextFields',
+    data: () => ({
+      searchtext: null
+    })
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
