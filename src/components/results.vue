@@ -1,15 +1,17 @@
 <template>
   <div class="results">
-    <p>Search text is: {{searchtext}}</p>
+    <div>
+      <p> Search Store: {{ $store.getters.search }} </p>
+    </div>
     <h1>Results:</h1>
-    <amplify-connect :query="listAMIsQuery">
+    <amplify-connect :query="getAMIquery">
       <template slot-scope="{loading, data, errors}">
         <div v-if="loading">Loading...</div>
 
         <div v-else-if="errors.length > 0"></div>
 
         <div v-else-if="data">
-          <AMIList :items="data.listAmis.items">{{data.listAmis.items}}</AMIList>
+          <div :items="data.getAmi">{{data.getAmi}}</div>
         </div>
       </template>
     </amplify-connect>    
@@ -18,44 +20,15 @@
 
 <script>
 import Amplify from 'aws-amplify';
-// import * as queries from './graphql/queries.js';
+import * as queries from '../graphql/queries.js';
 
 import aws_exports from '../aws-exports';
-
 Amplify.configure(aws_exports);
-
-const ListAMIs = `query ListAmis($filter: ModelamiFilterInput, $limit: Int, $nextToken: String) {
-  listAmis(filter: $filter, limit: $limit, nextToken: $nextToken) {
-    items {
-      id
-      name
-      description
-      virtualizationtype
-      hypervisor
-      imageowneralias
-      enasupport
-      sriovnetsupport
-      imageid
-      state
-      blockdevicemappings
-      architecture
-      imagelocation
-      rootdevicetype
-      ownerid
-      roodevicename
-      creationdate
-      public
-      imagetype
-      commitdate
-    }
-    nextToken
-  }
-}`;
 
 export default {
   computed: {
-    listAMIsQuery() {
-      return this.$Amplify.graphqlOperation(ListAMIs);
+    getAMIquery() {
+      return this.$Amplify.graphqlOperation(queries.getAmi, { id: this.$store.getters.search });
     }
   }
 }

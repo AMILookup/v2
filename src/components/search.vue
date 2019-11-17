@@ -2,18 +2,31 @@
   <div class="search">
     <h1>Search</h1>
     <p>Add Search Bar Here</p>
-    <input type="text" v-model="searchtext" placeholder="edit me">
-    <p>Message is: {{ searchtext }}</p>
+    <input v-model="search" type="text" placeholder="edit me">
+    <button @click="submit()">Submit</button>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'TextFields',
-    data: () => ({
-      searchtext: null
-    })
+
+
+export default {
+  data() {
+    return {
+      search: ''
+    }
+  },
+  methods: {
+    submit() {
+      this.$store.commit('change', this.search)
+    }
   }
+  // computed: {
+  //   ...mapGetters([
+  //     'searchQuery'
+  //   ])
+  // }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
