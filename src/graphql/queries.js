@@ -22,7 +22,7 @@ export const getAmi = `query GetAmi($id: ID!) {
     creationdate
     public
     imagetype
-    commitdate
+    crawledtime
   }
 }
 `;
@@ -48,7 +48,7 @@ export const listAmis = `query ListAmis($filter: ModelamiFilterInput, $limit: In
       creationdate
       public
       imagetype
-      commitdate
+      crawledtime
     }
     nextToken
   }

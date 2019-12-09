@@ -22,7 +22,7 @@ export const onCreateAmi = `subscription OnCreateAmi {
     creationdate
     public
     imagetype
-    commitdate
+    crawledtime
   }
 }
 `;
@@ -47,7 +47,7 @@ export const onUpdateAmi = `subscription OnUpdateAmi {
     creationdate
     public
     imagetype
-    commitdate
+    crawledtime
   }
 }
 `;
@@ -72,7 +72,7 @@ export const onDeleteAmi = `subscription OnDeleteAmi {
     creationdate
     public
     imagetype
-    commitdate
+    crawledtime
   }
 }
 `;

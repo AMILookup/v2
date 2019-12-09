@@ -22,7 +22,7 @@ export const createAmi = `mutation CreateAmi($input: CreateAmiInput!) {
     creationdate
     public
     imagetype
-    commitdate
+    crawledtime
   }
 }
 `;
@@ -47,7 +47,7 @@ export const updateAmi = `mutation UpdateAmi($input: UpdateAmiInput!) {
     creationdate
     public
     imagetype
-    commitdate
+    crawledtime
   }
 }
 `;
@@ -72,7 +72,7 @@ export const deleteAmi = `mutation DeleteAmi($input: DeleteAmiInput!) {
     creationdate
     public
     imagetype
-    commitdate
+    crawledtime
   }
 }
 `;
