@@ -9,6 +9,11 @@
             "UnauthRoleName": "amplify-amilookupv2-dev-143733-unauthRole",
             "StackName": "amplify-amilookupv2-dev-143733",
             "StackId": "arn:aws:cloudformation:us-east-1:124775650587:stack/amplify-amilookupv2-dev-143733/ed4f5200-03f9-11ea-87a5-0eee31812ac2"
+        },
+        "categories": {
+            "auth": {
+                "amilookupv2fcb00cf2": {}
+            }
         }
     }
 }

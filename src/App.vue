@@ -2,6 +2,7 @@
   <div id="app">
     <search/>
     <results/>
+    <login/>
     <!-- <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
@@ -9,13 +10,15 @@
 
 <script>
 import { components } from 'aws-amplify-vue';
-import results from './components/results.vue'
-import search from './components/search.vue'
+import results from './components/results.vue';
+import search from './components/search.vue';
+import login from './components/user/login/login.vue';
 
 export default {
   components: {
     search,
     results,
+    login,
     ...components
   }
 }

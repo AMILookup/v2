@@ -23,5 +23,12 @@
 			"providerPlugin": "awscloudformation"
 		}
 	},
-	"function": {}
+	"function": {},
+	"auth": {
+		"amilookupv2fcb00cf2": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
 }
