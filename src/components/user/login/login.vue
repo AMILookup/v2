@@ -8,6 +8,23 @@
 // <script src="./login.js"> </script>
 
 <script>
+export default {
+  data() {
+    return {
+      user: ''
+    }
+  },
+  methods: {
+    submit() {
+      this.$user.commit('change', this.user)
+    }
+  }
+  // computed: {
+  //   ...mapGetters([
+  //     'searchQuery'
+  //   ])
+  // }
+}
 </script>
 
 <style scoped>

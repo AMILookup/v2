@@ -1,8 +1,8 @@
 {
-    "identityPoolName": "amilookupv2fcb00cf2_identitypool_fcb00cf2",
+    "identityPoolName": "amilookupv24854fafe_identitypool_4854fafe",
     "allowUnauthenticatedIdentities": false,
-    "resourceNameTruncated": "amiloofcb00cf2",
-    "userPoolName": "amilookupv2fcb00cf2_userpool_fcb00cf2",
+    "resourceNameTruncated": "amiloo4854fafe",
+    "userPoolName": "amilookupv24854fafe_userpool_4854fafe",
     "autoVerifiedAttributes": [
         "email"
     ],
@@ -18,20 +18,30 @@
     "passwordPolicyMinLength": 8,
     "passwordPolicyCharacters": [],
     "requiredAttributes": [
-        "email"
+        "email",
+        "name"
     ],
     "userpoolClientGenerateSecret": true,
     "userpoolClientRefreshTokenValidity": 30,
     "userpoolClientWriteAttributes": [
-        "email"
+        "email",
+        "name"
     ],
     "userpoolClientReadAttributes": [
-        "email"
+        "email",
+        "name"
     ],
-    "userpoolClientLambdaRole": "amiloofcb00cf2_userpoolclient_lambda_role",
-    "userpoolClientSetAttributes": false,
-    "resourceName": "amilookupv2fcb00cf2",
+    "userpoolClientLambdaRole": "amiloo4854fafe_userpoolclient_lambda_role",
+    "userpoolClientSetAttributes": true,
+    "useDefault": "manual",
     "authSelections": "identityPoolAndUserPool",
+    "resourceName": "amilookupv24854fafe4854fafe",
+    "thirdPartyAuth": false,
+    "userPoolGroups": false,
+    "adminQueries": false,
+    "triggers": "{}",
+    "hostedUI": false,
+    "userPoolGroupList": [],
     "authRoleArn": {
         "Fn::GetAtt": [
             "AuthRole",
@@ -44,7 +54,9 @@
             "Arn"
         ]
     },
-    "useDefault": "default",
-    "userPoolGroupList": [],
+    "parentStack": {
+        "Ref": "AWS::StackId"
+    },
+    "permissions": [],
     "dependsOn": []
 }
