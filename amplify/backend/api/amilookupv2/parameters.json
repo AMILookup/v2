@@ -3,5 +3,11 @@
     "DynamoDBBillingMode": "PROVISIONED",
     "DynamoDBModelTableReadIOPS": 5,
     "DynamoDBModelTableWriteIOPS": 5,
-    "DynamoDBEnableServerSideEncryption": "false"
+    "DynamoDBEnableServerSideEncryption": "false",
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authamilookupv24854fafe4854fafe",
+            "Outputs.UserPoolId"
+        ]
+    }
 }

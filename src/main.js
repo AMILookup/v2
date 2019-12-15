@@ -9,7 +9,7 @@
 
 import Vue from 'vue'
 import App from './App.vue'
-import { store } from './store'
+import { store, user } from './store'
 import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import awsconfig from './aws-exports'
@@ -23,6 +23,7 @@ Vue.use(AmplifyPlugin, AmplifyModules)
 
 new Vue({
   store,
+  user,
   render: h => h(App)
 }).$mount('#app')
 

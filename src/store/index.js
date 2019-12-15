@@ -16,3 +16,17 @@ export const store = new Vuex.Store({
         search: state => state.search
     }
 });
+
+export const user = new Vuex.Store({
+    state: {
+        user: ''
+    },
+    mutations: {
+        change(state, user) {
+            state.user = user
+        }
+    },
+    getters: {
+        user: state => state.user
+    }
+});
